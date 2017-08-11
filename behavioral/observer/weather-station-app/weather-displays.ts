@@ -6,11 +6,12 @@ export interface IWeatherDisplay {
 }
 
 export class ForecastDisplay implements IWeatherDisplay {
-    update(data: WeatherDataObject): void {
-        console.log('forecast display showing data)');
-    }
     constructor(private weatherData: IObservable) {
         this.weatherData.subscribe(this);
+    }
+
+    public update(data: WeatherDataObject): void {
+        console.log('forecast display showing data)');
     }
 }
 
