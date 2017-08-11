@@ -1,12 +1,12 @@
 import { WeatherStation } from './weather-station';
 import { IWeatherData, WeatherData } from './weather-data';
-import { CurrentStateDisplay, IWeatherDisplay } from './weather-displays';
+import { CurrentStateDisplay } from './weather-displays';
 
 let weatherData: IWeatherData = new WeatherData();
 let weatherStation = new WeatherStation(weatherData);
 
-let currentStateDisplay: IWeatherDisplay = new CurrentStateDisplay(weatherData);
-let forecastDisplay: IWeatherDisplay = new CurrentStateDisplay(weatherData);
+let currentStateDisplay = new CurrentStateDisplay(weatherData);
+let forecastDisplay = new CurrentStateDisplay(weatherData);
 
 const data: Object = {
     temperature: 20,

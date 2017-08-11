@@ -1,23 +1,22 @@
-import { IObservable } from './observable.interface';
-import { IWeatherDisplay } from './weather-displays';
+import { IObserver, ISubject } from './observable.interface';
 
-export interface IWeatherData extends IObservable {
+export interface IWeatherData extends ISubject {
     notifyDataChanged(data: any): void;
 }
 
 export class WeatherData implements IWeatherData {
-    private subscribers: IWeatherDisplay[] = [];
+    private observers: IObserver[] = [];
 
     public notifyDataChanged(data: any): void {
-        this.subscribers.forEach(sub => sub.update(data));
+        this.observers.forEach(o => o.update(data));
     }
 
-    public subscribe(display: IWeatherDisplay): void {
-        this.subscribers.push(display);
+    public subscribe(display: IObserver): void {
+        this.observers.push(display);
     }
 
-    public unsubscribe(display: IWeatherDisplay): void {
-        let index: number = this.subscribers.indexOf(display);
-        this.subscribers.splice(index, 1);
+    public unsubscribe(display: IObserver): void {
+        let index: number = this.observers.indexOf(display);
+        this.observers.splice(index, 1);
     }
 }

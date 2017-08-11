@@ -1,6 +1,8 @@
-import { IWeatherDisplay } from './weather-displays';
+export interface ISubject {
+    subscribe(observer: IObserver): void;
+    unsubscribe(observer: IObserver): void;
+}
 
-export interface IObservable {
-    subscribe(display: IWeatherDisplay): void;
-    unsubscribe(display: IWeatherDisplay): void;
+export interface IObserver {
+    update(data: any): void;
 }
