@@ -1,13 +1,12 @@
 import { IObserver, ISubject } from './observable.interface';
 import { WeatherDataObject } from './weather-station';
 
-abstract class Display {
-    abstract display(data: any): void;
+export interface IDisplay {
+    display(data: any): void;
 }
 
-export class ForecastDisplay extends Display implements IObserver {
+export class ForecastDisplay implements IObserver, IDisplay {
     constructor(private weatherData: ISubject) {
-        super();
         this.weatherData.subscribe(this);
     }
 
@@ -16,14 +15,13 @@ export class ForecastDisplay extends Display implements IObserver {
         this.display(data);
     }
 
-    private display(data: WeatherDataObject): void {
+    public display(data: WeatherDataObject): void {
         console.log('forecast display showing data)');
     }
 }
 
-export class CurrentStateDisplay extends Display implements IObserver {
+export class CurrentStateDisplay implements IObserver, IDisplay {
     constructor(private weatherData: ISubject) {
-        super();
         this.weatherData.subscribe(this);
     }
 
@@ -32,7 +30,7 @@ export class CurrentStateDisplay extends Display implements IObserver {
         this.display(data);
     }
 
-    private display(data: WeatherDataObject): void {
+    public display(data: WeatherDataObject): void {
         console.log('current state display showing data)');
     }
 }
