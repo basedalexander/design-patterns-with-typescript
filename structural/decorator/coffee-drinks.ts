@@ -1,17 +1,17 @@
-import { Beverage, IBeverage } from './beverage';
+import { Beverage } from './beverage';
 
 export class Americano extends Beverage {
     constructor() {
         super();
-        this.name = "Americano";
-        this.price = 0.85;
+        this.setName('Americano');
+        this.setPrices(0.5, 1, 1.5);
     }
 }
 
 export class DarkRoast extends Beverage {
     constructor() {
         super();
-        this.name = "DarkRoast";
-        this.price = 1.85;
+        this.setName('DarkRoast');
+        this.setPrices(0.7, 1.2, 1.8);
     }
 }

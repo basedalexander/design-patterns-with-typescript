@@ -10,15 +10,16 @@ export class Mocha extends CondimentDecorator {
     constructor(beverage: Beverage) {
         super();
         this.beverage = beverage;
-        this.name = "Mocha";
-        this.price = 0.15;
+        this.setSize(this.beverage.getSize());
+        this.setName('Mocha');
+        this.setPrices(0.2, 0.5, 0.7);
     }
 
     public getName(): string {
         return `${this.beverage.getName()} + ${this.getName()}`;
     }
     public getPrice(): number {
-        return this.beverage.getPrice() + this.price;
+        return this.beverage.getPrice() + this.getPriceBySize();
     }
 }
 
@@ -26,15 +27,16 @@ export class Sugar extends CondimentDecorator {
     constructor(beverage: Beverage) {
         super();
         this.beverage = beverage;
-        this.name = "Sugar";
-        this.price = 0.05;
+        this.setSize(this.beverage.getSize());
+        this.setName('Sugar');
+        this.setPrices(0.2, 0.5, 0.7);
     }
 
     public getName(): string {
         return `${this.beverage.getName()} + ${this.getName()}`;
     }
     public getPrice(): number {
-        return this.beverage.getPrice() + this.price;
+        return this.beverage.getPrice() + this.getPriceBySize();
     }
 }
 
@@ -42,14 +44,15 @@ export class Whip extends CondimentDecorator {
     constructor(beverage: Beverage) {
         super();
         this.beverage = beverage;
-        this.name = "Whip";
-        this.price = 0.25;
+        this.setSize(this.beverage.getSize());
+        this.setName('Whip');
+        this.setPrices(0.2, 0.5, 0.7);
     }
 
     public getName(): string {
         return `${this.beverage.getName()} + ${this.getName()}`;
     }
     public getPrice(): number {
-        return this.beverage.getPrice() + this.price;
+        return this.beverage.getPrice() + this.getPriceBySize();
     }
 }
