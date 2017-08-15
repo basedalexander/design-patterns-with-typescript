@@ -1,7 +1,7 @@
 
-import { Beverage, ProductSize } from './beverage';
 import { SugarCondiment, WhipCondiment } from './condiments';
 import { Americano } from './coffee-drinks';
+import { Beverage, ProductSize } from './beverage';
 
 let americano: Beverage = new Americano();
 americano.getName();
