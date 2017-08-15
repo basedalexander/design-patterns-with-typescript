@@ -1,8 +1,9 @@
 import { PizzaStore } from './pizza-store';
-import { PizzaKind, SimplePizzaFactory } from './simple-pizza-factory';
+import { SimplePizzaFactory } from './simple-pizza-factory';
+import { PizzaType } from '../pizza-type';
 
 let pizzaFacotory = new SimplePizzaFactory();
 let pizzaStore: PizzaStore = new PizzaStore(pizzaFacotory);
 
-pizzaStore.orderPizza(PizzaKind.Veggie);
-pizzaStore.orderPizza(PizzaKind.Cheese);
+pizzaStore.orderPizza(PizzaType.Veggie);
+pizzaStore.orderPizza(PizzaType.Cheese);
