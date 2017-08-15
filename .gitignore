@@ -2,3 +2,4 @@
 *.d.ts
 .idea
 node_modules
+*.js.*
