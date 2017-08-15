@@ -1,6 +1,6 @@
 import { PizzaStore } from './pizza-store';
 import { SimplePizzaFactory } from './simple-pizza-factory';
-import { PizzaType } from '../pizza-type';
+import { PizzaType } from './pizza-type';
 
 let pizzaFacotory = new SimplePizzaFactory();
 let pizzaStore: PizzaStore = new PizzaStore(pizzaFacotory);

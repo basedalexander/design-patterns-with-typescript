@@ -1,5 +1,5 @@
-import { PizzaType } from '../pizza-type';
-import { Pizza } from '../pizza';
+import { PizzaType } from '../simple-factory/pizza-type';
+import { Pizza } from '../simple-factory/pizza';
 
 export abstract class PizzaStore {
     public orderPizza(type: PizzaType): Pizza {

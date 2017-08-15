@@ -1,6 +1,6 @@
 import { SimplePizzaFactory } from './simple-pizza-factory';
-import { Pizza } from '../pizza';
-import { PizzaType } from '../pizza-type';
+import { Pizza } from './pizza';
+import { PizzaType } from './pizza-type';
 
 export class PizzaStore {
     constructor(private pizzaFactory: SimplePizzaFactory) {

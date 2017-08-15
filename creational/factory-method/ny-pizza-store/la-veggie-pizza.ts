@@ -1,4 +1,4 @@
-import { Pizza } from '../../pizza';
+import { Pizza } from '../../simple-factory/pizza';
 
 export class NYVeggiePizza extends Pizza {
 

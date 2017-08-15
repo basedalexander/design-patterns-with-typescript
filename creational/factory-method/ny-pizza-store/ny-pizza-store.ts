@@ -1,6 +1,6 @@
 import { PizzaStore } from '../pizza-store';
-import { PizzaType } from '../../pizza-type';
-import { Pizza } from '../../pizza';
+import { PizzaType } from '../../simple-factory/pizza-type';
+import { Pizza } from '../../simple-factory/pizza';
 import { NYCheesePizza } from './ny-cheese-pizza';
 import { NYVeggiePizza } from './la-veggie-pizza';
 
