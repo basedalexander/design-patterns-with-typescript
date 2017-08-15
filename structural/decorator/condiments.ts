@@ -6,12 +6,12 @@ export abstract class CondimentDecorator extends Beverage {
     abstract getPrice(): number;
 }
 
-export class Mocha extends CondimentDecorator {
+export class MochaCondiment extends CondimentDecorator {
     constructor(beverage: Beverage) {
         super();
         this.beverage = beverage;
         this.setSize(this.beverage.getSize());
-        this.setName('Mocha');
+        this.setName('MochaCondiment');
         this.setPrices(0.2, 0.5, 0.7);
     }
 
@@ -23,12 +23,12 @@ export class Mocha extends CondimentDecorator {
     }
 }
 
-export class Sugar extends CondimentDecorator {
+export class SugarCondiment extends CondimentDecorator {
     constructor(beverage: Beverage) {
         super();
         this.beverage = beverage;
         this.setSize(this.beverage.getSize());
-        this.setName('Sugar');
+        this.setName('SugarCondiment');
         this.setPrices(0.2, 0.5, 0.7);
     }
 
@@ -40,12 +40,12 @@ export class Sugar extends CondimentDecorator {
     }
 }
 
-export class Whip extends CondimentDecorator {
+export class WhipCondiment extends CondimentDecorator {
     constructor(beverage: Beverage) {
         super();
         this.beverage = beverage;
         this.setSize(this.beverage.getSize());
-        this.setName('Whip');
+        this.setName('WhipCondiment');
         this.setPrices(0.2, 0.5, 0.7);
     }
 
