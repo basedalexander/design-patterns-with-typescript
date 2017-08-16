@@ -6,5 +6,6 @@ export abstract class PizzaStore {
         return this.createPizza(type);
     }
 
+    // can be implemented by default
     abstract createPizza(type: PizzaType): Pizza;
 }
