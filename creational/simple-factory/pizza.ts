@@ -1,8 +1,9 @@
 export abstract class Pizza {
     name: string;
-    dough: string;
-    sauce: string;
-    toppings: string[] = [];
+    dough: any;
+    cheeze: any;
+    sauce: any;
+    veggies: any[];
 
     prepare(): void { }
     bake(): void { }

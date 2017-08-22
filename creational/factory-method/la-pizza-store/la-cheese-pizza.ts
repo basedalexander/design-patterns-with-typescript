@@ -1,10 +1,14 @@
 import { Pizza } from '../../simple-factory/pizza';
+import { IPizzaIngredientsFactory } from '../pizza-ingredients-factory';
 
 export class LACheesePizza extends Pizza {
-    constructor() {
+    constructor(private ingreadientsFactory: IPizzaIngredientsFactory) {
         super();
         this.name = 'LA Cheese Pizza';
-        this.dough = 'thin dough';
-        this.sauce = 'chilly sauce';
+
+        this.dough = this.ingreadientsFactory.createDough();
+        this.sauce = this.ingreadientsFactory.createSauce();
+        this.veggies = this.ingreadientsFactory.createVeggies();
+        this.cheeze = this.ingreadientsFactory.createCheeze();
     }
 }
