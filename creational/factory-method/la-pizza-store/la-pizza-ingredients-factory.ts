@@ -1,11 +1,9 @@
 import { IPizzaIngredientsFactory } from '../pizza-ingredients-factory';
-import { ThickDough } from '../pizza-ingredients/thick-dough';
-import { Sauce1 } from '../pizza-ingredients/sauce1';
-import { Cheeze1 } from '../pizza-ingredients/cheeze1';
+import { Veggies2, Cheese1, Sauce1, ThickDough } from '../pizza-ingredients/index';
 
 export class LaPizzaIngredientsFactory implements IPizzaIngredientsFactory {
     public createDough(): any { return new ThickDough(); }
     public createSauce(): any { return new Sauce1(); }
-    public createVeggies(): any[] { return []; }
-    public createCheeze(): any { return new Cheeze1(); }
+    public createVeggies(): any[] { return <any>[]> new Veggies2(); }
+    public createCheese(): any { return new Cheese1(); }
 }

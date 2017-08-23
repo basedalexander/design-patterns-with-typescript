@@ -1,10 +1,10 @@
 import { Pizza } from './pizza';
+import { IPizzaIngredientsFactory } from '../factory-method/pizza-ingredients-factory';
 
 export class VeggiePizza extends Pizza {
-    constructor() {
+    constructor(private pizzaIngredientsFactory: IPizzaIngredientsFactory) {
         super();
         this.name = 'Veggie Pizza';
-        this.dough = 'normal dough';
-        this.sauce = 'normal sauce';
+        this.getIngredients();
     }
 }
