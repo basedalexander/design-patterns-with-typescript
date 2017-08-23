@@ -6,12 +6,18 @@ import { CheesePizza } from '../../simple-factory/cheese-pizza';
 import { VeggiePizza } from '../../simple-factory/veggie-pizza';
 
 export class NYPizzaStore extends PizzaStore {
+    constructor() {
+        super();
+
+        this.ingredientsFactory = new NYPizzaIngredientsFactory();
+    }
+
     public createPizza(type: PizzaType): Pizza {
         if (type === PizzaType.Cheese) {
-            return new CheesePizza(new NYPizzaIngredientsFactory());
+            return new CheesePizza(this.ingredientsFactory);
         }
         if (type === PizzaType.Veggie) {
-            return new VeggiePizza(new NYPizzaIngredientsFactory());
+            return new VeggiePizza(this.ingredientsFactory);
         }
     }
 }
