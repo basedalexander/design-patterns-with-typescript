@@ -1,5 +1,5 @@
 import { Pizza } from './pizza';
-import { IPizzaIngredientsFactory } from '../factory-method/pizza-ingredients-factory';
+import { IPizzaIngredientsFactory } from '../abstract-factory/pizza-ingredients-factory.interface';
 
 export class CheesePizza extends Pizza {
     constructor(private pizzaIngredientsFactory: IPizzaIngredientsFactory) {
