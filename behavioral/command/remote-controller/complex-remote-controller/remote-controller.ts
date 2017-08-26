@@ -6,6 +6,8 @@ export class RemoteController {
     private offCommands: ICommand[] = [];
     private SLOTS_AMOUNT: number = 6;
 
+    private lastCommand: ICommand;
+
     constructor() {
         // Null Pattern usage
         let emptyCommand: ICommand = new EmptyCommand();
@@ -14,6 +16,8 @@ export class RemoteController {
             this.onCommands[i] = emptyCommand;
             this.offCommands[i] = emptyCommand;
         }
+
+        this.lastCommand = emptyCommand;
     }
 
     public setSlot(slotNumber: number, onCommand: ICommand, offCommand: ICommand): void {
@@ -22,10 +26,18 @@ export class RemoteController {
     }
 
     public onButtonWasPressed(slotNumber: number): void {
-        this.onCommands[slotNumber].execute();
+        let command: ICommand = this.onCommands[slotNumber];
+        command.execute();
+        this.lastCommand = command;
     }
 
     public offButtonWasPressed(slotNumber: number): void {
-        this.offCommands[slotNumber].execute();
+        let command: ICommand = this.offCommands[slotNumber];
+        command.execute();
+        this.lastCommand = command;
+    }
+
+    public onUndoButtonWasPressed(): void {
+        this.lastCommand.undo();
     }
 }

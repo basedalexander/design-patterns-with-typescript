@@ -6,7 +6,11 @@ export class UpGarageDoorCommand implements ICommand {
 
     }
 
-    execute(): void {
+    public execute(): void {
         this.garage.upDoor();
+    }
+
+    public undo(): void {
+        this.garage.downDoor();
     }
 }

@@ -8,4 +8,8 @@ export class LightOnCommand implements ICommand {
     public execute(): void {
         this.light.on();
     }
+
+    public undo(): void {
+        this.light.off();
+    }
 }
