@@ -1,4 +1,4 @@
-import { ICommand } from './command.interface';
+import { ICommand } from '../common/command.interface';
 import { ISimpleController } from './simple-controller.interface';
 
 export class SimpleRemoteController implements ISimpleController {

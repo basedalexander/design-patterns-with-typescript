@@ -1,10 +1,10 @@
 import { ISimpleController } from './simple-controller.interface';
 import { SimpleRemoteController } from './simple-remote-controller';
-import { ICommand } from './command.interface';
-import { LightOnCommand } from './commands/light-on.command';
-import { Light } from './vendor-remote-devices/light';
-import { UpGarageDoorCommand } from './commands/up-garage-door.command';
-import { Garage } from './vendor-remote-devices/garage';
+import { ICommand } from '../common/command.interface';
+import { LightOnCommand } from '../common/commands/light-on.command';
+import { Light } from '../common/vendor-remote-devices/light';
+import { UpGarageDoorCommand } from '../common/commands/up-garage-door.command';
+import { Garage } from '../common/vendor-remote-devices/garage';
 
 
 let lightRemoteDevice: any = new Light();

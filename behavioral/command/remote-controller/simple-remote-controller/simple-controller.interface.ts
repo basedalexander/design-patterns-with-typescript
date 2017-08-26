@@ -1,4 +1,4 @@
-import { ICommand } from './command.interface';
+import { ICommand } from '../common/command.interface';
 
 export interface ISimpleController {
     setSlot(command: ICommand): void;
