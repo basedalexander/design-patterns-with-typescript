@@ -1,9 +1,9 @@
 import { PizzaStore } from '../pizza-store';
-import { PizzaType } from '../../simple-factory/pizza-type';
-import { Pizza } from '../../simple-factory/pizza';
+import { PizzaType } from '../../pizza/pizza-type';
+import { Pizza } from '../../pizza/pizza';
 import { NYPizzaIngredientsFactory } from '../../abstract-factory/ny-pizza-ingredients-factory';
-import { CheesePizza } from '../../simple-factory/cheese-pizza';
-import { VeggiePizza } from '../../simple-factory/veggie-pizza';
+import { CheesePizza } from '../../pizza/cheese-pizza';
+import { VeggiePizza } from '../../pizza/veggie-pizza';
 
 export class NYPizzaStore extends PizzaStore {
     constructor() {

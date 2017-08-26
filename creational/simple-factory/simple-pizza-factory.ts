@@ -1,7 +1,7 @@
-import { Pizza } from './pizza';
-import { VeggiePizza } from './veggie-pizza';
-import { CheesePizza } from './cheese-pizza';
-import { PizzaType } from './pizza-type';
+import { Pizza } from '../pizza/pizza';
+import { VeggiePizza } from '../pizza/veggie-pizza';
+import { CheesePizza } from '../pizza/cheese-pizza';
+import { PizzaType } from '../pizza/pizza-type';
 
 // The simplies way to demonstrate
 // Also used without instantiation, also know as static factory

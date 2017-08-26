@@ -1,5 +1,5 @@
-import { PizzaType } from '../simple-factory/pizza-type';
-import { Pizza } from '../simple-factory/pizza';
+import { PizzaType } from '../pizza/pizza-type';
+import { Pizza } from '../pizza/pizza';
 import { IPizzaIngredientsFactory } from '../abstract-factory/pizza-ingredients-factory.interface';
 
 export abstract class PizzaStore {
