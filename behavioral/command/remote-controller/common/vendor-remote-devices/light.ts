@@ -1,11 +1,34 @@
+export enum LightState {
+    On,
+    Off,
+    Dim
+}
+
 export class Light {
-    private isOn: boolean = false;
+    private state: LightState;
+
+    constructor() {
+        this.state = LightState.Off;
+    }
+
 
     public on(): void {
-        this.isOn = true;
+        this.state = LightState.On;
     }
 
     public off(): void {
-        this.isOn = false;
+        this.state = LightState.Off;
+    }
+
+    public dim(): void {
+        this.state = LightState.Dim
+    }
+
+    public getState(): LightState {
+        return this.state;
+    }
+
+    public setState(state: LightState): void {
+        this.state = state;
     }
 }
