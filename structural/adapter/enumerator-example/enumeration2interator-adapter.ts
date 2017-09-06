@@ -1,9 +1,9 @@
-import { IIterator } from './interfator.interface';
-import { IEnumerator } from './enumerator.interface';
+import { IIterator } from './iterator.interface';
+import { IEnumeration } from './enumeration.interface';
 
-export class EnumeratorIteratorAdapter implements IIterator {
+export class Enumeration2IteratorAdapter implements IIterator {
 
-    constructor(private adaptee: IEnumerator) {}
+    constructor(private adaptee: IEnumeration) {}
 
     public hasNext(): boolean {
         return this.adaptee.hasMoreElements();

@@ -1,4 +1,4 @@
-export interface IEnumerator {
+export interface IEnumeration {
     hasMoreElements(): boolean;
     nextElement(): any;
 }
