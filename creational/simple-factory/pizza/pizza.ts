@@ -1,4 +1,4 @@
-import { IPizzaIngredientsFactory } from '../abstract-factory/pizza-ingredients-factory.interface';
+import { IPizzaIngredientsFactory } from '../../abstract-factory/pizza-ingredients-factory.interface';
 
 export abstract class Pizza {
     name: string;

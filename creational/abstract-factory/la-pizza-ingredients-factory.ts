@@ -1,5 +1,5 @@
 import { IPizzaIngredientsFactory } from './pizza-ingredients-factory.interface';
-import { Veggies2, Cheese1, Sauce1, ThickDough } from '../pizza-ingredients/index';
+import { Veggies2, Cheese1, Sauce1, ThickDough } from '../simple-factory/pizza-ingredients/index';
 
 export class LaPizzaIngredientsFactory implements IPizzaIngredientsFactory {
     public createDough(): any { return new ThickDough(); }

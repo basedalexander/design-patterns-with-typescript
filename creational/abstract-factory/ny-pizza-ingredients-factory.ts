@@ -1,8 +1,8 @@
 import { IPizzaIngredientsFactory } from './pizza-ingredients-factory.interface';
-import { ThinDough } from '../pizza-ingredients/thin-dough';
-import { Sauce2 } from '../pizza-ingredients/sauce2';
-import { Veggies1 } from '../pizza-ingredients/veggies1';
-import { Cheese2 } from '../pizza-ingredients/cheese2';
+import { ThinDough } from '../simple-factory/pizza-ingredients/thin-dough';
+import { Sauce2 } from '../simple-factory/pizza-ingredients/sauce2';
+import { Veggies1 } from '../simple-factory/pizza-ingredients/veggies1';
+import { Cheese2 } from '../simple-factory/pizza-ingredients/cheese2';
 
 export class NYPizzaIngredientsFactory implements IPizzaIngredientsFactory {
     public createDough(): any { return new ThinDough(); }
