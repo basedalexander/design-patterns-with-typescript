@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --reporter dot -w './**/*.spec.js'"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,9 @@
   },
   "homepage": "https://github.com/thohoh/design-patterns-with-typescript#readme",
   "devDependencies": {
-    "@types/node": "^8.0.22"
+    "@types/mocha": "^2.2.43",
+    "@types/node": "^8.0.22",
+    "mocha": "^3.5.1"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
