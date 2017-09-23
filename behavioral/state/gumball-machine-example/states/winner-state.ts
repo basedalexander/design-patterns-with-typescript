@@ -1,6 +1,9 @@
 import { IState } from '../state.interface';
+import { GumballMachine } from '../gumball-machine';
 
 export class WinnerState implements IState {
+    constructor(private gumballMachine: GumballMachine) {}
+
     public insertQuarter(): void {
 
     }

@@ -1,4 +1,4 @@
-export class GumballMachine {
+export class BadGumballMachine {
     private state: number;
     private ballsCount: number = 0;
 
