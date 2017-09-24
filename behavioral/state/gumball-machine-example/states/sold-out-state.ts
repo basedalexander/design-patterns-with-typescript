@@ -19,4 +19,8 @@ export class SoldOutState implements IState {
     public dispense(): void {
         console.warn(`The machine is empty`);
     }
+
+    public refill(): void {
+        this.gumballMachine.setState(this.gumballMachine.getNoQuorterState());
+    }
 }

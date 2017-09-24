@@ -29,6 +29,10 @@ export class HasQuarterState implements IState {
     }
 
     public dispense(): void {
+        console.warn('Nope');
+    }
 
+    public refill(): void {
+        // do nothing;
     }
 }

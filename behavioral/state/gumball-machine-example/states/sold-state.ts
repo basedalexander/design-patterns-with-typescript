@@ -25,4 +25,8 @@ export class SoldState implements IState {
             this.gumballMachine.setState(this.gumballMachine.getSoldOutState());
         }
     }
+    
+    public refill(): void {
+        // do nothing;
+    }
 }

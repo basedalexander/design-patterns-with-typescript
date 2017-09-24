@@ -29,24 +29,24 @@ export class GumballMachine {
     public insertQuarter(): void {
         this.state.insertQuarter();
     }
-
     public ejectQuarter(): void {
         this.state.ejectQuarter();
     }
-
     public turnCrank(): void {
         this.state.turnCrank();
         this.state.dispense();
     }
-
     public setState(state: IState): void {
         this.state = state;
     }
-
     public releaseBall(): void {
         if (this.count > 0) {
             this.count = this.count - 1;
         }
+    }
+    public refill(gumballsAmount: number): void {
+        this.count = this.count + gumballsAmount;
+        this.state.refill();
     }
 
     public getNoQuorterState(): IState {

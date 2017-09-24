@@ -33,4 +33,8 @@ export class WinnerState implements IState {
             }
         }
     }
+
+    public refill(): void {
+        // do nothing;
+    }
 }

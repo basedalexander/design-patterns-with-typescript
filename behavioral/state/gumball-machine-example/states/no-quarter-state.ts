@@ -20,4 +20,8 @@ export class NoQuarterState implements IState {
     public dispense(): void {
         console.warn(`The quarter hasn't been provided`);
     }
+
+    public refill(): void {
+        // do nothing;
+    }
 }
