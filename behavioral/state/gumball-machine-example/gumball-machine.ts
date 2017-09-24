@@ -3,12 +3,14 @@ import { HasQuarterState } from './states/has-quarter-state';
 import { NoQuarterState } from './states/no-quarter-state';
 import { SoldState } from './states/sold-state';
 import { SoldOutState } from './states/sold-out-state';
+import { WinnerState } from './states/winner-state';
 
 export class GumballMachine {
     private soldOutState: IState;
     private noQuarterState: IState;
     private hasQuarterState: IState;
     private soldState: IState;
+    private winnerState: IState;
 
     private state: IState;
     private count: number;
@@ -18,6 +20,7 @@ export class GumballMachine {
         this.noQuarterState = new NoQuarterState(this);
         this.hasQuarterState = new HasQuarterState(this);
         this.soldState = new SoldState(this);
+        this.winnerState = new WinnerState(this);
 
         this.state = this.soldOutState;
         this.count = 0;
@@ -57,6 +60,9 @@ export class GumballMachine {
     }
     public getSoldOutState(): IState {
         return this.soldOutState;
+    }
+    public getWinnerState(): IState {
+        return this.winnerState;
     }
     public getCount(): number {
         return this.count;

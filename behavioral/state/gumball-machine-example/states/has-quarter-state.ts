@@ -1,8 +1,13 @@
 import { IState } from '../state.interface';
 import { GumballMachine } from '../gumball-machine';
+import { ChanceGenerator } from '../chance-generator';
 
 export class HasQuarterState implements IState {
-    constructor(private gumballMachine: GumballMachine) {}
+    private chanceGenerator: ChanceGenerator = new ChanceGenerator();
+    private winnerChancePercentage: number = 10;
+
+    constructor(private gumballMachine: GumballMachine) {
+    }
 
     public insertQuarter(): void {
         console.warn('The quorter has already been inserted');
@@ -14,6 +19,12 @@ export class HasQuarterState implements IState {
     }
 
     public turnCrank(): void {
+        const winner: boolean = this.chanceGenerator.getChanceOfPercent(this.winnerChancePercentage);
+
+        if (winner) {
+            this.gumballMachine.setState(this.gumballMachine.getWinnerState());
+        }
+
         this.gumballMachine.setState(this.gumballMachine.getSoldState());
     }
 
