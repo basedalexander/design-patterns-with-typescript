@@ -46,7 +46,7 @@ export class GumballMachine {
     }
     public refill(gumballsAmount: number): void {
         this.count = this.count + gumballsAmount;
-        this.state.refill();
+        this.state = this.noQuarterState;
     }
 
     public getNoQuorterState(): IState {
