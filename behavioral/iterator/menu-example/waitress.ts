@@ -2,13 +2,11 @@ import { IMenu } from './interfaces';
 import { IIterable, IIterator } from '../interfaces';
 
 export class Waitress {
-    constructor(private dinnerMenu: IIterable, private pancakeHouseMenu: IIterable) {
+    constructor(private menus: IIterable[]) {
     }
 
     public printMenus(): void {
-        let dinnerMenuIterator: IIterator = this.dinnerMenu.createIterator();
-        let pancakeHouseMenuIterator: IIterator = this.pancakeHouseMenu.createIterator();
-        this.printMenu(pancakeHouseMenuIterator);
+        this.menus.forEach( m => this.printMenu(m.createIterator()));
     }
 
     private printMenu(menuIterator: IIterator): void {
