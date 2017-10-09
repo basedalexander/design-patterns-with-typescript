@@ -2,7 +2,7 @@ import { IMenu } from './interfaces';
 import { IIterable, IIterator } from '../interfaces';
 
 export class Waitress {
-    constructor(private menus: IIterable[]) {
+    constructor(private menus: IMenu[]) {
     }
 
     public printMenus(): void {
