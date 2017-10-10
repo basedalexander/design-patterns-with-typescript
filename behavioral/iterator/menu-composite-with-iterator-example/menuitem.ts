@@ -1,4 +1,6 @@
 import { MenuComponent } from './menu-component';
+import { IIterator } from '../interfaces';
+import { NullIterator } from './null-iterator';
 
 export class MenuItem extends MenuComponent {
     constructor(
@@ -34,5 +36,9 @@ export class MenuItem extends MenuComponent {
                 ${this.vegetarian}
             `
         );
+    }
+
+    public createIterator(): IIterator {
+        return new NullIterator();
     }
 }

@@ -3,6 +3,7 @@ import { IIterator } from '../interfaces';
 declare const Symbol;
 
 import { MenuComponent } from './menu-component';
+import { ComponentIterator } from './component-iterator';
 
 export class Menu extends MenuComponent {
     private items: MenuComponent[] = [];
@@ -41,9 +42,9 @@ export class Menu extends MenuComponent {
         console.log(this.getDescription());
         console.log('--------------------');
 
-        let iterator = this.items[Symbol.iterator]();
+        let iterator = this.createIterator();
 
-        while (true) {
+        while (iterator.hasNext()) {
             let item: { value: MenuComponent, done: boolean } = iterator.next();
 
             if (item.done) {
@@ -55,6 +56,6 @@ export class Menu extends MenuComponent {
     }
 
     public createIterator(): IIterator {
-
+        return new ComponentIterator(this.items[Symbol.iterator]()); // is if javascript's iterator were implementing our IIterator interface
     }
 }
